@@ -27,6 +27,7 @@ namespace Állomány_project
             List<string> bevitel_elemek_értéke = new List<string>();
             //egyéb változók létrehozása
             string bevitel;
+            string bevitel2;
             bool van_s = true;
             bool van_j = true;
             bool van_n = true;
@@ -55,60 +56,90 @@ namespace Állomány_project
             //MAIN program
             do
             {
-                //bekérés segítő
-                Console.WriteLine();
-                Console.ForegroundColor = ConsoleColor.Magenta;
-                Console.WriteLine("sorszám (s:'szám-tól-szám-ig / szám')");
-                Console.WriteLine("játékos (j:'neve részlet/teljes')");
-                Console.WriteLine("nemzetiség (n:'nemzetiség 3betűs formátum')");
-                Console.WriteLine("poszt (p:'nagybetűs rövidítés')");
-                Console.WriteLine("csapat (cs:'csapatnév részlet/teljes')");
-                Console.WriteLine("comp (c:'comp részlet/teljes')");
-                Console.WriteLine("kor (k:'korának szám / szám-tól-szám-ig')");
-                Console.WriteLine("születés (sz:'szám / szám-tól-szám-ig')");
-                Console.WriteLine("MP (mp:'szám / szám-tól-szám-ig')");
-                Console.WriteLine("Starts (st:'szám / szám-tól-szám-ig')");
-                Console.WriteLine();
-                Console.ForegroundColor = ConsoleColor.Blue;
-                Console.WriteLine("rendezés sorszám: s_:n/cs (növekvő / csökkenő) ");
-                Console.WriteLine("rendezés betűsorrend: b_:n/cs ");
-                Console.WriteLine("rendezés nemzet: n_:n/cs ");
-                Console.WriteLine("rendezés poszt: p_:n/cs ");
-                Console.WriteLine("rendezés csapat: cs_:n/cs ");
-                Console.WriteLine("rendezés comp: c_:n/cs ");
-                Console.WriteLine("rendezés kor: k_:n/cs ");
-                Console.WriteLine("rendezés születés: sz_:n/cs ");
-                Console.WriteLine("rendezés MP: mp_:n/cs ");
-                Console.WriteLine("rendezés Starts: st_:n/cs ");
-                Console.WriteLine();
-                Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine("látszat sorszám (s-:f/t )");
-                Console.WriteLine("látszat játékos (j-:f/t )");
-                Console.WriteLine("látszat nemzet (n-:f/t )");
-                Console.WriteLine("látszat poszt (p-:f/t )");
-                Console.WriteLine("látszat csapat (cs-:f/t )");
-                Console.WriteLine("látszat comp (c-:f/t )");
-                Console.WriteLine("látszat kor (k-:f/t )");
-                Console.WriteLine("látszat születés: sz-:f/t ");
-                Console.WriteLine("látszat MP (mp-:f/t )");
-                Console.WriteLine("látszat Starts (st-:f/t )");
-                Console.WriteLine();
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("reset: reset");
-                Console.ForegroundColor = ConsoleColor.Cyan;
+
 
                 //kódbeviteli mező
+                do
+                {
+                    //bekérés segítő
+                    Console.WriteLine();
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine("1.  szortírozás sorszám          11. rendezés sorszám                21. látszat sorszám");
+                    Console.WriteLine("2.  szortírozás játékos          12. rendezés betűsorrend            22. látszat játékos");
+                    Console.WriteLine("3.  szortírozás nemzetiség       13. rendezés nemzet                 23. látszat nemzet");
+                    Console.WriteLine("4.  szortírozás posz             14. rendezés poszt                  24. látszat poszt");
+                    Console.WriteLine("5.  szortírozás csapat           15. rendezés csapat                 25. látszat csapat");
+                    Console.WriteLine("6.  szortírozás comp             16. rendezés comp                   26. látszat comp");
+                    Console.WriteLine("7.  szortírozás kor              17. rendezés kor                    27. látszat kor");
+                    Console.WriteLine("8.  szortírozás születés         18. rendezés születés               28. látszat születés");
+                    Console.WriteLine("9.  szortírozás MP               19. rendezés MP                     29. látszat MP");
+                    Console.WriteLine("10. szortírozás Starts           20. rendezés Starts                 30. látszat Starts");
+                    Console.WriteLine();
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("reset: reset");
+                    Console.WriteLine("kilépés: kilépés");
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                    Console.WriteLine("válasszon értéket");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("bevitel végéhez nyomjon ENTER-t");
+                    bevitel = Console.ReadLine();
+                    
+                    Console.WriteLine();
+                    Console.Clear();
+                    if ((bevitel != "reset" && bevitel != "" && bevitel != "kilépés") && (int.Parse(bevitel) == 1 || (int.Parse(bevitel) >= 7 && int.Parse(bevitel) <= 10)))
+                    {
+                        Console.WriteLine("állomány hossza jelenleg {0}", Kimenet.Count);
+                        Console.WriteLine("egy elem kiválasztásához írjon egy számot");
+                        Console.WriteLine("több elem kiválasztásához írjon 2 számot - jel el elválasztva");
+                        bevitel_elemek.Add(bevitel);
+                        bevitel2 = Console.ReadLine();
+                        bevitel_elemek_értéke.Add(bevitel2);
+                    }
+                    else if ((bevitel != "reset" && bevitel != "" && bevitel != "kilépés") && (int.Parse(bevitel) >= 2 && int.Parse(bevitel) <= 6))
+                    {
+                        Console.WriteLine("állomány hossza jelenleg {0}", Kimenet.Count);
+                        Console.WriteLine("Adja meg pontosan a szöveget vagy egy részletét a pontatlanabb kereséshez");
+                        bevitel_elemek.Add(bevitel);
+                        bevitel2 = Console.ReadLine();
+                        bevitel_elemek_értéke.Add(bevitel2);
+                    }
+                    else if ((bevitel != "reset" && bevitel != "" && bevitel != "kilépés") && (int.Parse(bevitel) >= 11 && int.Parse(bevitel) <= 20))
+                    {
+                        Console.WriteLine("állomány hossza jelenleg {0}", Kimenet.Count);
+                        Console.WriteLine("növekvő sorrendhez vigyen be (n) betűt");
+                        Console.WriteLine("csökkenő sorrendhez vigyen be (cs) betűt");
+                        bevitel_elemek.Add(bevitel);
+                        bevitel2 = Console.ReadLine();
+                        bevitel_elemek_értéke.Add(bevitel2);
+                    }
+                    else if ((bevitel != "reset" && bevitel != "" && bevitel != "kilépés") && (int.Parse(bevitel) >= 21 && int.Parse(bevitel) <= 30))
+                    {
+                        Console.WriteLine("állomány hossza jelenleg {0}", Kimenet.Count);
+                        Console.WriteLine("A megjelenés törléséhez vigyen be (f) betűt");
+                        Console.WriteLine("A megjelenés megjelenítéséhez vigyen be (t) betűt");
+                        bevitel_elemek.Add(bevitel);
+                        bevitel2 = Console.ReadLine();
+                        bevitel_elemek_értéke.Add(bevitel2);
+                    }
+                    Console.Clear();
+                    if (bevitel != "reset" && bevitel != "" && bevitel != "kilépés")
+                    {
+                        for (int i = 0; i < bevitel_elemek.Count; i++)
+                        {
+                            Console.WriteLine("bevitt érték: {0} {1}", bevitel_elemek[i], bevitel_elemek_értéke[i]);
+                        }
+                    }
+      
+                    Console.WriteLine();
+                } while (bevitel != "" && bevitel != "reset" && bevitel != "kilépés");
+
+
+
                 
-                bevitel = Console.ReadLine();
                 //kimenet reset eldöntése
                 if (bevitel != "reset")
                 {
-                    //bevitel feldolgozása
-                    for (int i = 0; i < bevitel.Split(' ').Length; i++)
-                    {
-                        bevitel_elemek.Add(bevitel.Split(' ')[i].Split(':')[0]);
-                        bevitel_elemek_értéke.Add(bevitel.Split(' ')[i].Split(':')[1]);
-                    }
+
                     //folyamat megkezdése
                     for (int i = 0; i < bevitel_elemek.Count; i++)
                     {
@@ -117,75 +148,75 @@ namespace Állomány_project
                         switch (bevitel_elemek[i])
                         {
                             //keresési feltételek
-                            case "s":
+                            case "1":
                                 Kimenet = sorszám(Kimenet, bevitel_elemek_értéke[i]);
                                 break;
-                            case "j":
+                            case "2":
                                 Kimenet = neve(Kimenet, bevitel_elemek_értéke[i]);
                                 break;
-                            case "n":
+                            case "3":
                                 Kimenet = nemzet(Kimenet, bevitel_elemek_értéke[i]);
                                 break;
-                            case "p":
+                            case "4":
                                 Kimenet = poszt(Kimenet, bevitel_elemek_értéke[i]);
                                 break;
-                            case "cs":
+                            case "5":
                                 Kimenet = csapat(Kimenet, bevitel_elemek_értéke[i]);
                                 break;
-                            case "c":
+                            case "6":
                                 Kimenet = comp(Kimenet, bevitel_elemek_értéke[i]);
                                 break;
-                            case "k":
+                            case "7":
                                 Kimenet = kora(Kimenet, bevitel_elemek_értéke[i]);
                                 break;
-                            case "sz":
+                            case "8":
                                 Kimenet = születés(Kimenet, bevitel_elemek_értéke[i]);
                                 break;
-                            case "mp":
+                            case "9":
                                 Kimenet = MP_(Kimenet, bevitel_elemek_értéke[i]);
                                 break;
-                            case "st":
+                            case "10":
                                 Kimenet = Starts_(Kimenet, bevitel_elemek_értéke[i]);
                                 break;
 
 
 
                             //szortírozási feltételek
-                            case "s_":
+                            case "11":
                                 Kimenet = sorszám_(Kimenet, bevitel_elemek_értéke[i]);
                                 break;
-                            case "b_":
+                            case "12":
                                 Kimenet = neve_(Kimenet, bevitel_elemek_értéke[i]);
                                 break;
-                            case "n_":
+                            case "13":
                                 Kimenet = nemzet_(Kimenet, bevitel_elemek_értéke[i]);
                                 break;
-                            case "p_":
+                            case "14":
                                 Kimenet = poszt_(Kimenet, bevitel_elemek_értéke[i]);
                                 break;
-                            case "cs_":
+                            case "15":
                                 Kimenet = csapat_(Kimenet, bevitel_elemek_értéke[i]);
                                 break;
-                            case "c_":
+                            case "16":
                                 Kimenet = comp_(Kimenet, bevitel_elemek_értéke[i]);
                                 break;
-                            case "k_":
+                            case "17":
                                 Kimenet = kora_(Kimenet, bevitel_elemek_értéke[i]);
                                 break;
-                            case "sz_":
+                            case "18":
                                 Kimenet = születés_(Kimenet, bevitel_elemek_értéke[i]);
                                 break;
-                            case "mp_":
+                            case "19":
                                 Kimenet = MP__(Kimenet, bevitel_elemek_értéke[i]);
                                 break;
-                            case "st_":
+                            case "20":
                                 Kimenet = Starts__(Kimenet, bevitel_elemek_értéke[i]);
                                 break;
 
 
 
                             //látszati feltételek
-                            case "s-":
+                            case "21":
                                 if (bevitel_elemek_értéke[i] == "f")
                                 {
                                     van_s = false;
@@ -195,7 +226,7 @@ namespace Állomány_project
                                     van_s = true;
                                 }
                                 break;
-                            case "j-":
+                            case "22":
                                 if (bevitel_elemek_értéke[i] == "f")
                                 {
                                     van_j = false;
@@ -205,7 +236,7 @@ namespace Állomány_project
                                     van_j = true;
                                 }
                                 break;
-                            case "n-":
+                            case "23":
                                 if (bevitel_elemek_értéke[i] == "f")
                                 {
                                     van_n = false;
@@ -215,7 +246,7 @@ namespace Állomány_project
                                     van_n = true;
                                 }
                                 break;
-                            case "p-":
+                            case "24":
                                 if (bevitel_elemek_értéke[i] == "f")
                                 {
                                     van_p = false;
@@ -225,7 +256,7 @@ namespace Állomány_project
                                     van_p = true;
                                 }
                                 break;
-                            case "cs-":
+                            case "25":
                                 if (bevitel_elemek_értéke[i] == "f")
                                 {
                                     van_cs = false;
@@ -235,7 +266,7 @@ namespace Állomány_project
                                     van_cs = true;
                                 }
                                 break;
-                            case "c-":
+                            case "26":
                                 if (bevitel_elemek_értéke[i] == "f")
                                 {
                                     van_c = false;
@@ -245,7 +276,7 @@ namespace Állomány_project
                                     van_c = true;
                                 }
                                 break;
-                            case "k-":
+                            case "27":
                                 if (bevitel_elemek_értéke[i] == "f")
                                 {
                                     van_k = false;
@@ -255,7 +286,7 @@ namespace Állomány_project
                                     van_k = true;
                                 }
                                 break;
-                            case "sz-":
+                            case "28":
                                 if (bevitel_elemek_értéke[i] == "f")
                                 {
                                     van_sz = false;
@@ -265,7 +296,7 @@ namespace Állomány_project
                                     van_sz = true;
                                 }
                                 break;
-                            case "mp-":
+                            case "29":
                                 if (bevitel_elemek_értéke[i] == "f")
                                 {
                                     van_mp = false;
@@ -275,7 +306,7 @@ namespace Állomány_project
                                     van_mp = true;
                                 }
                                 break;
-                            case "st-":
+                            case "30":
                                 if (bevitel_elemek_értéke[i] == "f")
                                 {
                                     van_st = false;
@@ -296,89 +327,94 @@ namespace Állomány_project
 
                     }
                     //kiíratás
-                    //távolságszámítás
-                    int zero0 = zeroh(Kimenet)[0];
-                    int zero1 = zeroh(Kimenet)[1] +zero0;
-                    int zero2 = zeroh(Kimenet)[2] +zero1;
-                    int zero3 = zeroh(Kimenet)[3] +zero2;
-                    int zero4 = zeroh(Kimenet)[4] +zero3;
-                    int zero5 = zeroh(Kimenet)[5] +zero4;
-                    int zero6 = zeroh(Kimenet)[6] +zero5;
-                    int zero7 = zeroh(Kimenet)[7] +zero6;
-                    int zero8 = zeroh(Kimenet)[8] +zero7;
-                    for (int i = 0; i < Kimenet.Count; i++)
+                    Console.Clear();
+                    if (bevitel != "kilépés")
                     {
-                        int corsor_p = Console.CursorTop;
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        //műveletek: látszat
-                        if (van_s)
+                        //távolságszámítás
+                        int zero0 = zeroh(Kimenet)[0];
+                        int zero1 = zeroh(Kimenet)[1] + zero0;
+                        int zero2 = zeroh(Kimenet)[2] + zero1;
+                        int zero3 = zeroh(Kimenet)[3] + zero2;
+                        int zero4 = zeroh(Kimenet)[4] + zero3;
+                        int zero5 = zeroh(Kimenet)[5] + zero4;
+                        int zero6 = zeroh(Kimenet)[6] + zero5;
+                        int zero7 = zeroh(Kimenet)[7] + zero6;
+                        int zero8 = zeroh(Kimenet)[8] + zero7;
+                        for (int i = 0; i < Kimenet.Count; i++)
                         {
-                            Console.SetCursorPosition(0, corsor_p);
-                            Console.Write(Kimenet[i].Split(';')[0]);
-                        }
-                        if (van_j)
-                        {
-                            Console.SetCursorPosition(zero0, corsor_p);
-                            Console.Write(Kimenet[i].Split(';')[1]);
-                        }
-                        if (van_n)
-                        {
-                            Console.SetCursorPosition(zero1, corsor_p);
-                            Console.Write(Kimenet[i].Split(';')[2]);
-                        }
-                        if (van_p)
-                        {
-                            Console.SetCursorPosition(zero2, corsor_p);
-                            Console.Write(Kimenet[i].Split(';')[3]);
-                        }
-                        if (van_cs)
-                        {
-                            Console.SetCursorPosition(zero3, corsor_p);
-                            Console.Write(Kimenet[i].Split(';')[4]);
-                        }
-                        if (van_c)
-                        {
-                            Console.SetCursorPosition(zero4, corsor_p);
-                            Console.Write(Kimenet[i].Split(';')[5]);
-                        }
-                        if (van_k)
-                        {
-                            Console.SetCursorPosition(zero5, corsor_p);
-                            Console.Write(Kimenet[i].Split(';')[6]);
-                        }
-                        if (van_sz)
-                        {
-                            Console.SetCursorPosition(zero6, corsor_p);
-                            Console.Write(Kimenet[i].Split(';')[7]);
-                        }
-                        if (van_mp)
-                        {
-                            Console.SetCursorPosition(zero7, corsor_p);
-                            Console.Write(Kimenet[i].Split(';')[8]);
-                        }
-                        if (van_st)
-                        {
-                            Console.SetCursorPosition(zero8, corsor_p);
-                            Console.Write(Kimenet[i].Split(';')[9]);
-                        }
-                        Console.WriteLine();
-                   
+                            int corsor_p = Console.CursorTop;
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            //műveletek: látszat
+                            if (van_s)
+                            {
+                                Console.SetCursorPosition(0, corsor_p);
+                                Console.Write(Kimenet[i].Split(';')[0]);
+                            }
+                            if (van_j)
+                            {
+                                Console.SetCursorPosition(zero0, corsor_p);
+                                Console.Write(Kimenet[i].Split(';')[1]);
+                            }
+                            if (van_n)
+                            {
+                                Console.SetCursorPosition(zero1, corsor_p);
+                                Console.Write(Kimenet[i].Split(';')[2]);
+                            }
+                            if (van_p)
+                            {
+                                Console.SetCursorPosition(zero2, corsor_p);
+                                Console.Write(Kimenet[i].Split(';')[3]);
+                            }
+                            if (van_cs)
+                            {
+                                Console.SetCursorPosition(zero3, corsor_p);
+                                Console.Write(Kimenet[i].Split(';')[4]);
+                            }
+                            if (van_c)
+                            {
+                                Console.SetCursorPosition(zero4, corsor_p);
+                                Console.Write(Kimenet[i].Split(';')[5]);
+                            }
+                            if (van_k)
+                            {
+                                Console.SetCursorPosition(zero5, corsor_p);
+                                Console.Write(Kimenet[i].Split(';')[6]);
+                            }
+                            if (van_sz)
+                            {
+                                Console.SetCursorPosition(zero6, corsor_p);
+                                Console.Write(Kimenet[i].Split(';')[7]);
+                            }
+                            if (van_mp)
+                            {
+                                Console.SetCursorPosition(zero7, corsor_p);
+                                Console.Write(Kimenet[i].Split(';')[8]);
+                            }
+                            if (van_st)
+                            {
+                                Console.SetCursorPosition(zero8, corsor_p);
+                                Console.Write(Kimenet[i].Split(';')[9]);
+                            }
+                            Console.WriteLine();
 
 
+
+                        }
                     }
-                }
-                //kimenet reset
-                else
-                {
-                    bevitel_elemek.Clear();
-                    bevitel_elemek_értéke.Clear();
-                    Kimenet.Clear();
-                    for (int i = 0; i < állomány.Length; i++)
+                    //kimenet reset
+                    else
                     {
-                        Kimenet.Add("" + i + ";" + Player[i] + ";" + Nation[i] + ";" + Pos[i] + ";" + Squad[i] + ";" + Comp[i] + ";" + Age[i] + ";" + Born[i] + ";" + MP[i] + ";" + Starts[i]);
+                        bevitel_elemek.Clear();
+                        bevitel_elemek_értéke.Clear();
+                        Kimenet.Clear();
+                        for (int i = 0; i < állomány.Length; i++)
+                        {
+                            Kimenet.Add("" + i + ";" + Player[i] + ";" + Nation[i] + ";" + Pos[i] + ";" + Squad[i] + ";" + Comp[i] + ";" + Age[i] + ";" + Born[i] + ";" + MP[i] + ";" + Starts[i]);
+                        }
                     }
                 }
-            } while (bevitel != "");
+                    
+            } while (bevitel != "kilépés");
 
 
             //program vége
