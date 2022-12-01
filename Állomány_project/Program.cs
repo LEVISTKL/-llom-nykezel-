@@ -472,10 +472,10 @@ namespace Állomány_project
             if (bevitel_elemek_értéke == "n")
             {
                 string abc = "aábcdeéfghiíjklnmoóöőpqrstuúüűvwxyz";
-                for (int i = Kimenet.Count - 1; i >= 0; i--)
+                for (int i = 0; i < Kimenet.Count; i++)
                 {
                     int van = -1;
-                    for (int j = 0; j < i; j++)
+                    for (int j = i; j > -1; j--)
                     {
 
 
@@ -484,14 +484,12 @@ namespace Állomány_project
                             van = j;
                         }
 
-
-                        if (i != Kimenet.Count && van != -1)
-                        {
-                            string ideiglenes = Kimenet[i];
-                            Kimenet.Remove(Kimenet[i]);
-                            Kimenet.Insert(van, ideiglenes);
-
-                        }
+                    }
+                    if (i != Kimenet.Count && van != -1)
+                    {
+                        string ideiglenes = Kimenet[i];
+                        Kimenet.Remove(Kimenet[i]);
+                        Kimenet.Insert(van, ideiglenes);
 
                     }
 
@@ -501,10 +499,10 @@ namespace Állomány_project
             else
             {
                 string abc = "aábcdeéfghiíjklnmoóöőpqrstuúüűvwxyz";
-                for (int i = Kimenet.Count - 1; i >= 0; i--)
+                for (int i = 0; i < Kimenet.Count; i++)
                 {
                     int van = -1;
-                    for (int j = 0; j < i; j++)
+                    for (int j = i; j > -1; j--)
                     {
 
 
@@ -513,14 +511,12 @@ namespace Állomány_project
                             van = j;
                         }
 
-
-                        if (i != Kimenet.Count && van != -1)
-                        {
-                            string ideiglenes = Kimenet[i];
-                            Kimenet.Remove(Kimenet[i]);
-                            Kimenet.Insert(van, ideiglenes);
-
-                        }
+                    }
+                    if (i != Kimenet.Count && van != -1)
+                    {
+                        string ideiglenes = Kimenet[i];
+                        Kimenet.Remove(Kimenet[i]);
+                        Kimenet.Insert(van, ideiglenes);
 
                     }
 
@@ -534,10 +530,10 @@ namespace Állomány_project
             if (bevitel_elemek_értéke == "n")
             {
                 string abc = "aábcdeéfghiíjklnmoóöőpqrstuúüűvwxyz";
-                for (int i = Kimenet.Count - 1; i >= 0; i--)
+                for (int i = 0; i < Kimenet.Count; i++)
                 {
                     int van = -1;
-                    for (int j = 0; j < i; j++)
+                    for (int j = i; j > -1; j--)
                     {
 
 
@@ -546,14 +542,12 @@ namespace Állomány_project
                             van = j;
                         }
 
-
-                        if (i != Kimenet.Count && van != -1)
-                        {
-                            string ideiglenes = Kimenet[i];
-                            Kimenet.Remove(Kimenet[i]);
-                            Kimenet.Insert(van, ideiglenes);
-
-                        }
+                    }
+                    if (i != Kimenet.Count && van != -1)
+                    {
+                        string ideiglenes = Kimenet[i];
+                        Kimenet.Remove(Kimenet[i]);
+                        Kimenet.Insert(van, ideiglenes);
 
                     }
 
@@ -563,10 +557,10 @@ namespace Állomány_project
             else
             {
                 string abc = "aábcdeéfghiíjklnmoóöőpqrstuúüűvwxyz";
-                for (int i = Kimenet.Count - 1; i >= 0; i--)
+                for (int i = 0; i < Kimenet.Count; i++)
                 {
                     int van = -1;
-                    for (int j = 0; j < i; j++)
+                    for (int j = i; j > -1; j--)
                     {
 
 
@@ -575,14 +569,12 @@ namespace Állomány_project
                             van = j;
                         }
 
-
-                        if (i != Kimenet.Count && van != -1)
-                        {
-                            string ideiglenes = Kimenet[i];
-                            Kimenet.Remove(Kimenet[i]);
-                            Kimenet.Insert(van, ideiglenes);
-
-                        }
+                    }
+                    if (i != Kimenet.Count && van != -1)
+                    {
+                        string ideiglenes = Kimenet[i];
+                        Kimenet.Remove(Kimenet[i]);
+                        Kimenet.Insert(van, ideiglenes);
 
                     }
 
@@ -596,10 +588,10 @@ namespace Állomány_project
             if (bevitel_elemek_értéke == "n")
             {
                 string abc = "aábcdeéfghiíjklnmoóöőpqrstuúüűvwxyz";
-                for (int i = Kimenet.Count - 1; i >= 0; i--)
+                for (int i = 0; i < Kimenet.Count; i++)
                 {
                     int van = -1;
-                    for (int j = 0; j < i; j++)
+                    for (int j = i; j > -1; j--)
                     {
 
 
@@ -608,14 +600,12 @@ namespace Állomány_project
                             van = j;
                         }
 
-
-                        if (i != Kimenet.Count && van != -1)
-                        {
-                            string ideiglenes = Kimenet[i];
-                            Kimenet.Remove(Kimenet[i]);
-                            Kimenet.Insert(van, ideiglenes);
-
-                        }
+                    }
+                    if (i != Kimenet.Count && van != -1)
+                    {
+                        string ideiglenes = Kimenet[i];
+                        Kimenet.Remove(Kimenet[i]);
+                        Kimenet.Insert(van, ideiglenes);
 
                     }
 
@@ -625,10 +615,10 @@ namespace Állomány_project
             else
             {
                 string abc = "aábcdeéfghiíjklnmoóöőpqrstuúüűvwxyz";
-                for (int i = Kimenet.Count - 1; i >= 0; i--)
+                for (int i = 0; i < Kimenet.Count; i++)
                 {
                     int van = -1;
-                    for (int j = 0; j < i; j++)
+                    for (int j = i; j > -1; j--)
                     {
 
 
@@ -637,14 +627,12 @@ namespace Állomány_project
                             van = j;
                         }
 
-
-                        if (i != Kimenet.Count && van != -1)
-                        {
-                            string ideiglenes = Kimenet[i];
-                            Kimenet.Remove(Kimenet[i]);
-                            Kimenet.Insert(van, ideiglenes);
-
-                        }
+                    }
+                    if (i != Kimenet.Count && van != -1)
+                    {
+                        string ideiglenes = Kimenet[i];
+                        Kimenet.Remove(Kimenet[i]);
+                        Kimenet.Insert(van, ideiglenes);
 
                     }
 
@@ -658,10 +646,10 @@ namespace Állomány_project
             if (bevitel_elemek_értéke == "n")
             {
                 string abc = "aábcdeéfghiíjklnmoóöőpqrstuúüűvwxyz";
-                for (int i = Kimenet.Count - 1; i >= 0; i--)
+                for (int i = 0; i < Kimenet.Count; i++)
                 {
                     int van = -1;
-                    for (int j = 0; j < i; j++)
+                    for (int j = i; j > -1; j--)
                     {
 
 
@@ -670,14 +658,12 @@ namespace Állomány_project
                             van = j;
                         }
 
-
-                        if (i != Kimenet.Count && van != -1)
-                        {
-                            string ideiglenes = Kimenet[i];
-                            Kimenet.Remove(Kimenet[i]);
-                            Kimenet.Insert(van, ideiglenes);
-
-                        }
+                    }
+                    if (i != Kimenet.Count && van != -1)
+                    {
+                        string ideiglenes = Kimenet[i];
+                        Kimenet.Remove(Kimenet[i]);
+                        Kimenet.Insert(van, ideiglenes);
 
                     }
 
@@ -687,10 +673,10 @@ namespace Állomány_project
             else
             {
                 string abc = "aábcdeéfghiíjklnmoóöőpqrstuúüűvwxyz";
-                for (int i = Kimenet.Count - 1; i >= 0; i--)
+                for (int i = 0; i < Kimenet.Count; i++)
                 {
                     int van = -1;
-                    for (int j = 0; j < i; j++)
+                    for (int j = i; j > -1; j--)
                     {
 
 
@@ -699,14 +685,12 @@ namespace Állomány_project
                             van = j;
                         }
 
-
-                        if (i != Kimenet.Count && van != -1)
-                        {
-                            string ideiglenes = Kimenet[i];
-                            Kimenet.Remove(Kimenet[i]);
-                            Kimenet.Insert(van, ideiglenes);
-
-                        }
+                    }
+                    if (i != Kimenet.Count && van != -1)
+                    {
+                        string ideiglenes = Kimenet[i];
+                        Kimenet.Remove(Kimenet[i]);
+                        Kimenet.Insert(van, ideiglenes);
 
                     }
 
@@ -720,10 +704,10 @@ namespace Állomány_project
             if (bevitel_elemek_értéke == "n")
             {
                 string abc = "aábcdeéfghiíjklnmoóöőpqrstuúüűvwxyz";
-                for (int i = Kimenet.Count - 1; i >= 0; i--)
+                for (int i = 0; i < Kimenet.Count; i++)
                 {
                     int van = -1;
-                    for (int j = 0; j < i; j++)
+                    for (int j = i; j > -1; j--)
                     {
 
 
@@ -732,14 +716,12 @@ namespace Állomány_project
                             van = j;
                         }
 
-
-                        if (i != Kimenet.Count && van != -1)
-                        {
-                            string ideiglenes = Kimenet[i];
-                            Kimenet.Remove(Kimenet[i]);
-                            Kimenet.Insert(van, ideiglenes);
-
-                        }
+                    }
+                    if (i != Kimenet.Count && van != -1)
+                    {
+                        string ideiglenes = Kimenet[i];
+                        Kimenet.Remove(Kimenet[i]);
+                        Kimenet.Insert(van, ideiglenes);
 
                     }
 
@@ -749,10 +731,10 @@ namespace Állomány_project
             else
             {
                 string abc = "aábcdeéfghiíjklnmoóöőpqrstuúüűvwxyz";
-                for (int i = Kimenet.Count - 1; i >= 0; i--)
+                for (int i = 0; i < Kimenet.Count; i++)
                 {
                     int van = -1;
-                    for (int j = 0; j < i; j++)
+                    for (int j = i; j > -1; j--)
                     {
 
 
@@ -761,14 +743,12 @@ namespace Állomány_project
                             van = j;
                         }
 
-
-                        if (i != Kimenet.Count && van != -1)
-                        {
-                            string ideiglenes = Kimenet[i];
-                            Kimenet.Remove(Kimenet[i]);
-                            Kimenet.Insert(van, ideiglenes);
-
-                        }
+                    }
+                    if (i != Kimenet.Count && van != -1)
+                    {
+                        string ideiglenes = Kimenet[i];
+                        Kimenet.Remove(Kimenet[i]);
+                        Kimenet.Insert(van, ideiglenes);
 
                     }
 
