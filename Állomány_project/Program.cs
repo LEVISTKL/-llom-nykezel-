@@ -98,6 +98,7 @@ namespace Állomány_project
                 Console.ForegroundColor = ConsoleColor.Cyan;
 
                 //kódbeviteli mező
+                
                 bevitel = Console.ReadLine();
                 //kimenet reset eldöntése
                 if (bevitel != "reset")
@@ -369,6 +370,8 @@ namespace Állomány_project
                 //kimenet reset
                 else
                 {
+                    bevitel_elemek.Clear();
+                    bevitel_elemek_értéke.Clear();
                     Kimenet.Clear();
                     for (int i = 0; i < állomány.Length; i++)
                     {

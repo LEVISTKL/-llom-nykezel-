@@ -6,3 +6,10 @@ C:\Users\LEVIS\Desktop\PROJECTS\Állomány_project\Állomány_project\obj\Debug\
 C:\Users\LEVIS\Desktop\PROJECTS\Állomány_project\Állomány_project\obj\Debug\Állomány_project.csproj.CoreCompileInputs.cache
 C:\Users\LEVIS\Desktop\PROJECTS\Állomány_project\Állomány_project\obj\Debug\Állomány_project.exe
 C:\Users\LEVIS\Desktop\PROJECTS\Állomány_project\Állomány_project\obj\Debug\Állomány_project.pdb
+C:\Users\nagylf\Desktop\-llom-nykezel--main\Állomány_project\bin\Debug\Állomány_project.exe.config
+C:\Users\nagylf\Desktop\-llom-nykezel--main\Állomány_project\bin\Debug\Állomány_project.exe
+C:\Users\nagylf\Desktop\-llom-nykezel--main\Állomány_project\bin\Debug\Állomány_project.pdb
+C:\Users\nagylf\Desktop\-llom-nykezel--main\Állomány_project\obj\Debug\Állomány_project.csproj.AssemblyReference.cache
+C:\Users\nagylf\Desktop\-llom-nykezel--main\Állomány_project\obj\Debug\Állomány_project.csproj.CoreCompileInputs.cache
+C:\Users\nagylf\Desktop\-llom-nykezel--main\Állomány_project\obj\Debug\Állomány_project.exe
+C:\Users\nagylf\Desktop\-llom-nykezel--main\Állomány_project\obj\Debug\Állomány_project.pdb
